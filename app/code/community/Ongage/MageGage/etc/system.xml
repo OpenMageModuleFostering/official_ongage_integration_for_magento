@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<!--
+    * Ongage Magento Plug-in
+    * Version 1.0
+    * Released March, 2014
+    * Credits: Jaldip Upadhyay, Krunal Patel, Pratik Patel, Dharmesh Vasani
+    * Terms of Service: http://www.ongage.com/legal-terms/terms-of-service
+    * Copyright (C) Ongage
+-->
+<config>
+    <tabs>
+        <gage translate="label" module="gage">
+            <label>Ongage Plugin</label>
+            <sort_order>400</sort_order>
+        </gage>
+    </tabs>
+    <sections>
+        <gage translate="label" module="gage">
+            <class>ongage-section</class>
+            <header_css>ongage-header</header_css>
+            <label>Ongage Configuration</label> 
+            <tab>gage</tab>
+            <sort_order>100</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>            
+            <groups>
+                <general translate="label">
+                    <label>Ongage Configuration</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>0</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>                        
+                        <ENABLED translate="label comment">
+                            <label>Enabled</label>
+                            <comment>Enable Ongage module</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </ENABLED>
+                        <user_name tranlate="label comment">
+                            <label>User Name</label>
+                            <comment>Enter Ongage Username</comment>
+                            <front_type>text</front_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </user_name>
+                        <password tranlate="label comment">
+                            <label>Password</label>
+                            <comment>Enter Ongage Password</comment>
+                            <front_type>text</front_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </password>
+                        <account_id tranlate="label comment">
+                            <label>Account Id</label>
+                            <comment>Enter Ongage Acount Id</comment>
+                            <front_type>text</front_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </account_id>
+                        <attach_list translate="label comment">
+                            <label>Attach Lists</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>gage/system_config_source_list</source_model>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                            <comment>All Lists that has been created on Ongage account. if no list is listed here, then create a list in Ongage account which you want to sync with Magento. </comment>  
+                        </attach_list>
+                        <letter_subscription translate="label comment">
+                            <label>Force For Newsletter Subscription</label>
+                            <comment></comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </letter_subscription> 
+                        <map_fields translate="label">
+                            <label>Customer Fields Mapping</label>
+                            <frontend_model>gage/adminhtml_system_config_form_field_mapfields</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </map_fields>
+                        <uploadcsv_file translate="label comment">
+                                <label>Upload .csv File</label>
+                                <comment>Selcet .csv file and click [Save Config] button</comment>
+                                <frontend_type>file</frontend_type>
+                                <backend_model>adminhtml/system_config_backend_file</backend_model>
+                                <upload_dir>media/ongage</upload_dir>
+                                <sort_order>80</sort_order>
+                                <show_in_default>1</show_in_default>
+                                <show_in_website>1</show_in_website>
+                                <show_in_store>1</show_in_store>
+                        </uploadcsv_file>   
+                        <oauth_wizard translate="button_label comment">
+                            <label>Download Sample File</label>
+                            <comment>Click above button to download sample .csv file</comment>
+                            <button_label>Sample Download</button_label>
+                            <frontend_model>gage/adminhtml_system_config_oauthWizard</frontend_model>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>0</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </oauth_wizard>     
+                    </fields> 
+                </general>
+            </groups>
+        </gage>
+    </sections>
+</config>

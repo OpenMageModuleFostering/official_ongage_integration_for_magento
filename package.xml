@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package>
+    <name>Official_Ongage_Integration_For_Magento</name>
+    <version>1.0.2</version>
+    <stability>stable</stability>
+    <license uri="https://connect.ongage.net">OSL v3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Send Emails from Magento using Ongage&#x2019;s revolutionary multi-ESP and multi-SMTP email marketing platform.</summary>
+    <description>    * Ongage Magento Extension&#xD;
+    * Version 1.0.2&#xD;
+    * Released May, 2014&#xD;
+    * Credits: Jaldip Upadhyay, Krunal Patel, Pratik Patel, Dharmesh Vasani&#xD;
+    * Terms of Service: http://www.ongage.com/legal-terms/terms-of-service&#xD;
+    * Copyright (C) Ongage</description>
+    <notes>    * Ongage Magento Extension&#xD;
+    * Version 1.0.2&#xD;
+    * Released May, 2014&#xD;
+    * Credits: Jaldip Upadhyay, Krunal Patel, Pratik Patel, Dharmesh Vasani&#xD;
+    * Terms of Service: http://www.ongage.com/legal-terms/terms-of-service&#xD;
+    * Copyright (C) Ongage</notes>
+    <authors><author><name>Stepin</name><user>stepinsolutions</user><email>hello@stepinsolutions.in</email></author><author><name>Ongage</name><user>OngageMagento</user><email>noam.r@ongage.com</email></author></authors>
+    <date>2014-06-12</date>
+    <time>12:40:59</time>
+    <contents><target name="mageetc"><dir name="modules"><file name="Ongage_MageGage.xml" hash="5ecdfa992fa305fd8887f7a575a37018"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="magegage.xml" hash="295346ac4d0b6e642a8956e3621e21ec"/></dir><dir name="template"><dir name="magegage"><file name="form.phtml" hash="d750cfc7fc84491756a00ea9dbb1687b"/></dir></dir></dir></dir></dir><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="magegage.xml" hash="94a34de81ea4153326ac849e0bbf9697"/></dir><dir name="template"><dir name="magegage"><dir name="system"><dir name="config"><file name="oauth_wizard.phtml" hash="d312e04ea02d43c847dff20ffca2f223"/></dir></dir></dir></dir></dir></dir></dir></target><target name="magecommunity"><dir name="Ongage"><dir name="MageGage"><dir name="Block"><dir name="Form"><file name="Register.php" hash="2393144b39f5870516e189adab7fa49a"/></dir><dir name="Adminhtml"><dir name="System"><dir name="Config"><dir name="Form"><dir name="Field"><file name="Mapfields.php" hash="36750db50f6f87f08054d1340e48e300"/></dir></dir><file name="OauthWizard.php" hash="296e5ced72c9eacb9fbb7bbcc6d6cc66"/></dir></dir></dir></dir><dir name="controllers"><dir name="Adminhtml"><file name="OngagemailController.php" hash="6989421ba128e79e44ec672c706ac89c"/></dir><file name="AccountController.php" hash="74ea4cce2ef943ba8e060df9e8901479"/><file name="SubscriberController.php" hash="4ca6edc4697e141cb2eb6df84690e687"/></dir><dir name="etc"><file name="adminhtml.xml" hash="96d1828639542d4be39b40ab14c94d36"/><file name="config.xml" hash="925974c3dbbfdfe053354e512b4a7228"/><file name="system.xml" hash="24c48626dab3661c0fb1bde0d0ed1c2e"/></dir><dir name="Helper"><file name="Data.php" hash="08cd14dfb859bb5f0a777c6aa2682ee0"/></dir><dir name="Model"><file name="Api.php" hash="5f68df7c9a37c09cf5cbe8a063a192e0"/><file name="Gage.php" hash="907e02ca0d2cf9739d6930c681423fd5"/><file name="Observer.php" hash="7e381bdf90545a0007bcff84e26b3572"/><dir name="System"><dir name="Config"><dir name="Source"><file name="List.php" hash="f5ca53d36984bad9f967d09d9a013552"/></dir></dir></dir></dir></dir></dir></target><target name="mageskin"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="ongage"><file name="ongage.css" hash="622f0efa3837289842a864adda513081"/><file name="ongage.jpg" hash="7eb304565e7dd974f6fd90a2c9a19acd"/></dir></dir></dir></dir></target><target name="magemedia"><dir name="ongagefile"><file name="samplefile.csv" hash="cb90cf47524c0323d00790a6d57ac9b9"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php><package><name>Mage_Core_Modules</name><channel>community</channel><min>1.6.0.0</min><max>1.7</max></package><extension><name>gd</name><min>2.0.28</min><max>3.0</max></extension></required></dependencies>
+</package>

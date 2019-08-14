@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+    * Ongage Magento Plug-in
+    * Version 1.0
+    * Released March, 2014
+    * Credits: Jaldip Upadhyay, Krunal Patel, Pratik Patel, Dharmesh Vasani
+    * Terms of Service: http://www.ongage.com/legal-terms/terms-of-service
+    * Copyright (C) Ongage
+-->
+<layout version="0.1.0">
+    <checkout_onepage_review>
+        <reference name="checkout.onepage.review.info.items.after">
+            <block type="core/template" name="gage.subscribe" template="magegage/form.phtml"></block>
+        </reference>
+    </checkout_onepage_review>
+</layout>

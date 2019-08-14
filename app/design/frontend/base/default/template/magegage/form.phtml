@@ -1,0 +1,85 @@
+<?php
+/*
+    * Ongage Magento Plug-in
+    * Version 1.0
+    * Released March, 2014
+    * Credits: Jaldip Upadhyay, Krunal Patel, Pratik Patel, Dharmesh Vasani
+    * Terms of Service: http://www.ongage.com/legal-terms/terms-of-service
+    * Copyright (C) Ongage
+*/
+?>
+<script type="text/javascript">
+subscribeLetter = function (element)
+{
+    if( $('ongage-subscribe') )
+    {
+        $('ongage-subscribe').remove();
+    }
+    if(element.checked)
+    {
+        var sInputCheckboxValue = new Element('input', { name: "ongage_subscribe", id: "ongage-subscribe", value: "1", type: "hidden" });
+        var sListValue = new Element('input', { name: element.readAttribute('name'), id: "subscribe", value: element.getValue(), type: "hidden" });
+        try
+        {
+            Element.insert(Form.findFirstElement(payment.form), sInputCheckboxValue);
+            Element.insert(Form.findFirstElement(payment.form), sListValue);
+        }
+        catch(notelement)
+        {
+            $("co-payment-form").insert(sInputCheckboxValue);
+            $("co-payment-form").insert(sListValue);
+        }
+    }
+}
+
+subscribeLetterForce = function ()
+{
+    var element=document.getElementById('lettersubscription');
+    if( $('ongage-subscribe') )
+    {
+            $('ongage-subscribe').remove();
+    }
+    if(element.checked)
+    {
+        var sInputCheckboxValue = new Element('input', { name: "ongage_subscribe", id: "ongage-subscribe", value: "1", type: "hidden" });
+        var sListValue = new Element('input', { name: element.readAttribute('name'), id: "subscribe", value: element.getValue(), type: "hidden" });
+        try
+        {
+            Element.insert(Form.findFirstElement(payment.form), sInputCheckboxValue);
+            Element.insert(Form.findFirstElement(payment.form), sListValue);
+        }
+        catch(notelement)
+        {
+            $("co-payment-form").insert(sInputCheckboxValue);
+            $("co-payment-form").insert(sListValue);
+        }
+    }
+}
+</script>
+<?php
+    $aConfigration = Mage::helper('gage')->getUserDetails();
+    if($aConfigration['letter_subscription'])
+    {
+        echo "<input type='hidden' name='is_letter' id='lettersubscription' class='checkbox' value='1' checked />";
+?>
+        <script type="text/javascript">
+            subscribeLetterForce();
+        </script>
+    <?php
+    }
+    else
+    {   
+    ?> 
+    <div class="fieldset">
+        <ul class="form-list">
+            <li class="control">
+                <input type="checkbox" name="is_letter" onchange="subscribeLetter(this)"; id="lettersubscription" value="1" title="<?php echo $this->__('Ongage Newsletter Subscription') ?>" class="checkbox" />
+                <label for="subscription">
+                    <?php echo $this->__('Ongage Newsletter Subscription') ?>
+                </label>
+            </li>
+        </ul>
+    </div>
+    <?php
+    }
+    ?>

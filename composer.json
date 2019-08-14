@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Official_Ongage_Integration_For_Magento",
+    "type": "magento-module",
+    "license": "OSL-v3.0",
+    "homepage": "",
+    "description": "Send Emails from Magento using Ongage’s revolutionary multi-ESP and multi-SMTP email marketing platform.",
+    "authors": [
+    {
+        "name": "Stepin",
+        "email": "hello@stepinsolutions.in"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

@@ -1,0 +1,35 @@
+ul.tabs a.ongage-section:hover 
+{
+	background-color:#D8E6E6; background-image:url(images/tabs_link_over_bg.gif); 
+}
+ul.tabs a.ongage-section
+ {
+	border-bottom: 1px; border-bottom-style: dotted;
+}
+ul.tabs a.ongage-section:hover
+ {
+	border-bottom: 1px; border-bottom-style: dotted;
+}
+ul.tabs a.ongage-section span,
+ul.tabs a.ongage-section:hover span
+ { 
+	background:url(ongage.jpg) no-repeat 17px 3px; overflow:hidden; padding:0; padding-left:43px; width:150px; height:24px; line-height:25px; 
+}
+ul.tabs a.ongage-section.active, ul.tabs a.ongage-section.active:hover 
+{
+	background-color: white;border-bottom-color: #8BA5A5;
+}
+
+small
+{ 
+	font-size: 9px; 
+}
+h3.ongage-header 
+{
+    background: url("ongage.jpg") no-repeat scroll 0 0 transparent;
+    height: 22px;
+    overflow: hidden;
+    padding: 0;
+    text-indent: -9999px;
+    width: 120px;
+}

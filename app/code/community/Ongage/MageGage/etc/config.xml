@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<!--
+    * Ongage Magento Plug-in
+    * Version 1.0
+    * Released March, 2014
+    * Credits: Jaldip Upadhyay, Krunal Patel, Pratik Patel, Dharmesh Vasani
+    * Terms of Service: http://www.ongage.com/legal-terms/terms-of-service
+    * Copyright (C) Ongage
+-->
+<config>
+    <modules>
+        <Ongage_MageGage>
+            <version>1.0.0</version>
+        </Ongage_MageGage>
+    </modules>	
+    <global>
+        <models>
+            <gage>
+                <class>Ongage_MageGage_Model</class>
+            </gage>
+        </models>
+        <resources>
+            <gage_setup>
+                <setup>
+                    <module>Ongage_MageGage</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </gage_setup>
+            <gage_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </gage_write>
+            <gage_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </gage_read>
+        </resources>
+        <blocks>
+            <gage>
+                <class>Ongage_MageGage_Block</class>
+            </gage>
+            <customer>
+                <rewrite>
+                    <form_register>Ongage_MageGage_Block_Form_Register</form_register>
+                </rewrite>
+            </customer>
+        </blocks>
+        <helpers>
+            <gage>
+                <class>Ongage_MageGage_Helper</class>
+            </gage>
+        </helpers>       
+<!--=========================================================================-->
+<!--          Below code for Subscriber delete her record on table           -->
+<!--=========================================================================--> 
+        <events>
+            <newsletter_subscriber_save_before>
+                <observers>
+                    <ongage_magegage_observer>
+                        <class>gage/observer</class>
+                        <method>handleSubscriber</method>
+                    </ongage_magegage_observer>
+                </observers>
+            </newsletter_subscriber_save_before>
+            <newsletter_subscriber_delete_after>
+                <observers>
+                    <ongage_magegage_delete_observer>
+                        <class>gage/observer</class>
+                        <method>subscriberDeletion</method>
+                    </ongage_magegage_delete_observer>
+                </observers>
+            </newsletter_subscriber_delete_after>
+    	</events>
+<!--=========================================================================-->
+    </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <gage after="Mage_Adminhtml">Ongage_MageGage</gage>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>	
+    <adminhtml>
+        <layout>
+            <updates>
+                <ongage_magegage>
+                    <file>magegage.xml</file>
+                </ongage_magegage>
+            </updates>
+    	</layout>
+        <events>
+            <admin_system_config_changed_section_gage>
+                <observers>
+                    <gage_save_config>
+                        <class>gage/observer</class>
+                        <method>saveConfig</method>
+                    </gage_save_config>
+                </observers>
+            </admin_system_config_changed_section_gage>
+        </events>
+    </adminhtml>	
+    <frontend>
+       <layout>
+            <updates>
+                <ongage_magegage>
+                    <file>magegage.xml</file>
+                </ongage_magegage>
+            </updates>
+        </layout>
+        <events>           
+<!--=========================================================================-->
+<!--             Below code for Registration submit button                   -->
+<!--=========================================================================-->
+            <customer_save_commit_after>
+                <observers>
+                    <ongage_magegage>
+                        <class>gage/observer</class>
+                        <method>customerAddInOngage</method>
+                    </ongage_magegage>
+                </observers>
+            </customer_save_commit_after>
+<!--=========================================================================-->                
+
+<!--=========================================================================-->
+<!--               Below code for place order button                         -->
+<!--=========================================================================-->
+            <controller_action_predispatch_onestepcheckout_index_index>
+                <observers>
+                    <ongage_magegage_checkout>
+                        <class>gage/observer</class>
+                        <method>registerCheckoutSubscribe</method>
+                    </ongage_magegage_checkout>
+                </observers>
+            </controller_action_predispatch_onestepcheckout_index_index>            
+            <controller_action_postdispatch_checkout_onepage_saveOrder>
+                <observers>
+                    <ongage_magegage_checkout>
+                        <class>gage/observer</class>
+                        <method>registerCheckoutSubscribe</method>
+                    </ongage_magegage_checkout>
+                </observers>
+            </controller_action_postdispatch_checkout_onepage_saveOrder>       
+<!--=========================================================================-->
+        </events>  
+<!--=========================================================================-->
+<!--               Below code for Controller file call                       -->
+<!--=========================================================================-->
+        <routers>
+            <newsletter>
+                <args>
+                    <modules>
+                         <Ongage_MageGage before="Mage_Newsletter">Ongage_MageGage</Ongage_MageGage>
+                    </modules>
+                </args>
+            </newsletter>
+        </routers>
+<!--=========================================================================-->
+    </frontend>
+<!--=========================================================================-->
+<!--               Below code for Customer field mapping                       -->
+<!--=========================================================================-->
+    <default>
+        <gage>
+            <general>
+                <map_fields><![CDATA[a:15:{i:0;a:2:{s:7:"magento";s:9:"firstname";s:6:"ongage";s:10:"first_name";}i:1;a:2:{s:7:"magento";s:8:"lastname";s:6:"ongage";s:9:"last_name";}i:2;a:2:{s:7:"magento";s:15:"billing_address";s:6:"ongage";s:7:"address";}i:3;a:2:{s:7:"magento";s:16:"shipping_address";s:6:"ongage";s:7:"address";}i:4;a:2:{s:7:"magento";s:6:"gender";s:6:"ongage";s:6:"gender";}i:5;a:2:{s:7:"magento";s:3:"dob";s:6:"ongage";s:3:"dob";}i:6;a:2:{s:7:"magento";s:6:"prefix";s:6:"ongage";s:6:"prefix";}i:7;a:2:{s:7:"magento";s:9:"telephone";s:6:"ongage";s:5:"phone";}i:8;a:2:{s:7:"magento";s:7:"company";s:6:"ongage";s:7:"company";}i:9;a:2:{s:7:"magento";s:8:"store_id";s:6:"ongage";s:7:"storeid";}i:10;a:2:{s:7:"magento";s:10:"website_id";s:6:"ongage";s:9:"websiteid";}i:11;a:2:{s:7:"magento";s:16:"date_of_purchase";s:6:"ongage";s:15:"dateof_purchase";}i:12;a:2:{s:7:"magento";s:19:"ee_customer_balance";s:6:"ongage";s:18:"ee_customerbalance";}i:13;a:2:{s:7:"magento";s:8:"group_id";s:6:"ongage";s:7:"groupid";}i:14;a:2:{s:7:"magento";s:7:"country";s:6:"ongage";s:7:"country";}}]]></map_fields>
+            </general>
+        </gage>
+    </default>
+<!--=========================================================================-->  
+</config>
