@@ -1,7 +1,7 @@
 <?php
 /*
     * Ongage Magento Plug-in
-    * Version 1.0
+    * Version 1.0.3
     * Released March, 2014
     * Credits: Jaldip Upadhyay, Krunal Patel, Pratik Patel, Dharmesh Vasani
     * Terms of Service: http://www.ongage.com/legal-terms/terms-of-service
@@ -110,7 +110,8 @@ class Ongage_MageGage_Model_Observer
     public function customerAddInOngage(Varien_Event_Observer $p_oObserver)
     {
         $aConfigration = Mage::helper('gage')->getUserDetails();
-        $aMappingField = $this->getMergeMaps(1);
+        $nCurrentActiveStoreId = Mage::app()->getStore()->getStoreId();
+        $aMappingField = $this->getMergeMaps($nCurrentActiveStoreId);
         $aCustomer_Info = array();
         foreach($aMappingField as $aMappingList)
         {
@@ -160,8 +161,8 @@ class Ongage_MageGage_Model_Observer
             $_totalData = $oOrder->getData();
             $_details = $oCustomer->getData(); 
 
-            $sSession            = Mage::getSingleton('core/session');
-            $sCustomerSession    = Mage::getSingleton('customer/session');
+            $sSession = Mage::getSingleton('core/session');
+            $sCustomerSession = Mage::getSingleton('customer/session');
 
             $aCustomer_Info = array();
             $orderId = (int)current($observer->getEvent()->getOrderIds());

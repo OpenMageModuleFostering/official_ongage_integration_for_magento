@@ -3,11 +3,11 @@
     "type": "magento-module",
     "license": "OSL-v3.0",
     "homepage": "",
-    "description": "Send Emails from Magento using Ongage’s revolutionary multi-ESP and multi-SMTP email marketing platform.",
+    "description": "Ongage Extension",
     "authors": [
     {
-        "name": "Stepin",
-        "email": "hello@stepinsolutions.in"
+        "name": "Stepin team",
+        "email": "StepinSolutionsteam@stepin.in"
     }
 ],
     "suggest": {
