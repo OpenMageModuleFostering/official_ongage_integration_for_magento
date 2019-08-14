@@ -1,28 +1,28 @@
 <?xml version="1.0"?>
 <package>
     <name>Official_Ongage_Integration_For_Magento</name>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <stability>stable</stability>
     <license uri="https://connect.ongage.net">OSL v3.0</license>
     <channel>community</channel>
     <extends/>
     <summary>Ongage Extension</summary>
     <description>Ongage Magento Plug-in&#xD;
-Version 1.0.4&#xD;
-Released March, 2014&#xD;
+Version 1.0.5&#xD;
+Released July, 2014&#xD;
 Credits: Jaldip Upadhyay, Krunal Patel, Pratik Patel, Dharmesh Vasani&#xD;
 Terms of Service: http://www.ongage.com/legal-terms/terms-of-service&#xD;
 Copyright (C) Ongage</description>
     <notes>Ongage Magento Plug-in&#xD;
-Version 1.0.4&#xD;
-Released March, 2014&#xD;
+Version 1.0.5&#xD;
+Released July, 2014&#xD;
 Credits: Jaldip Upadhyay, Krunal Patel, Pratik Patel, Dharmesh Vasani&#xD;
 Terms of Service: http://www.ongage.com/legal-terms/terms-of-service&#xD;
 Copyright (C) Ongage</notes>
     <authors><author><name>Stepin team</name><user>StepinSolutions</user><email>StepinSolutionsteam@stepin.in</email></author></authors>
     <date>2014-07-26</date>
-    <time>09:59:38</time>
-    <contents><target name="mageetc"><dir name="modules"><file name="Ongage_MageGage.xml" hash="9dbe3b67d2214d6df1a9a388de77d6a4"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="magegage.xml" hash="40cdb54eabf808e7a78c0f1b877ef272"/></dir><dir name="template"><dir name="magegage"><file name="form.phtml" hash="b54991105376eb50094c479ff473add7"/></dir></dir></dir></dir></dir><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="template"><dir name="magegage"><dir name="system"><dir name="config"><file name="oauth_wizard.phtml" hash="85523c96bd7be6c70ef8f836239b6d41"/></dir></dir></dir></dir><dir name="layout"><file name="magegage.xml" hash="87a6435da6c441578d9c19fd003b4c5d"/></dir></dir></dir></dir></target><target name="magemedia"><dir name="ongagefile"><file name="samplefile.csv" hash="cb90cf47524c0323d00790a6d57ac9b9"/></dir></target><target name="mageskin"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="ongage"><file name="ongage.css" hash="9b3e869813c2339e2858636ef7a10a19"/><file name="ongage.jpg" hash="7eb304565e7dd974f6fd90a2c9a19acd"/></dir></dir></dir></dir></target><target name="magecommunity"><dir name="Ongage"><dir name="MageGage"><dir name="Block"><dir name="Form"><file name="Register.php" hash="bbaee78b545aa7f2e8092b736c2ad546"/></dir><dir name="Adminhtml"><dir name="System"><dir name="Config"><dir name="Form"><dir name="Field"><file name="Mapfields.php" hash="69b424ddba8b4b9aa5cab34298eb46ec"/></dir></dir><file name="OauthWizard.php" hash="74eed3d7c5de485fe55f6d3f9f7f8412"/></dir></dir></dir></dir><dir name="controllers"><dir name="Adminhtml"><file name="OngagemailController.php" hash="b21bf7bdcdef570becf799656044999e"/></dir><file name="AccountController.php" hash="7e40cbc229d0faf68ee48277110e59b9"/><file name="SubscriberController.php" hash="e0a8912283d9a1cae48a2f442164b56e"/></dir><dir name="etc"><file name="adminhtml.xml" hash="74edc50cdf26fda5745e911a66523d6e"/><file name="config.xml" hash="b69cf50d16506fe526ad50ad482e9e59"/><file name="system.xml" hash="9c2339da0328f2faffe4cddb244b8387"/></dir><dir name="Helper"><file name="Data.php" hash="8ca0d24e0cfdb03890a5b20abe0e45b9"/></dir><dir name="Model"><file name="Api.php" hash="b690ce1ba346cae8234aa77642de84e8"/><file name="Gage.php" hash="763a58ce5f7363754c3481e2a60cbb1f"/><file name="Observer.php" hash="91724fc28da025a31df8526d631e84e5"/><dir name="System"><dir name="Config"><dir name="Source"><file name="List.php" hash="9df4da1fc1f70493a815286ba247e7d4"/></dir></dir></dir></dir></dir></dir></target></contents>
+    <time>11:08:52</time>
+    <contents><target name="mageetc"><dir name="modules"><file name="Ongage_MageGage.xml" hash="483cfc8db4822e298be1d2cd4fb05c29"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="magegage.xml" hash="11480dfd5bd618b313df328052f091c2"/></dir><dir name="template"><dir name="magegage"><file name="form.phtml" hash="a1b12624374a7b704c7470b4217c5869"/></dir></dir></dir></dir></dir><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="template"><dir name="magegage"><dir name="system"><dir name="config"><file name="oauth_wizard.phtml" hash="962b39433abc897abcae7e98ad2878a0"/></dir></dir></dir></dir><dir name="layout"><file name="magegage.xml" hash="fde188b01fecdf572b61190eaa0c0f81"/></dir></dir></dir></dir></target><target name="magemedia"><dir name="ongagefile"><file name="samplefile.csv" hash="cb90cf47524c0323d00790a6d57ac9b9"/></dir></target><target name="mageskin"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="ongage"><file name="ongage.css" hash="9b3e869813c2339e2858636ef7a10a19"/><file name="ongage.jpg" hash="7eb304565e7dd974f6fd90a2c9a19acd"/></dir></dir></dir></dir></target><target name="magecommunity"><dir name="Ongage"><dir name="MageGage"><dir name="Block"><dir name="Form"><file name="Register.php" hash="5d3ec3c39a076efb9ac1ec61cb77cf1b"/></dir><dir name="Adminhtml"><dir name="System"><dir name="Config"><dir name="Form"><dir name="Field"><file name="Mapfields.php" hash="0d7b9194ad4117390331cb356f105190"/></dir></dir><file name="OauthWizard.php" hash="55d3b6b0bb4977e65337061e60ba4d39"/></dir></dir></dir></dir><dir name="controllers"><dir name="Adminhtml"><file name="OngagemailController.php" hash="9629a0d3ba0d6e2105017b880d8d022b"/></dir><file name="AccountController.php" hash="6ec8a8d3d4d38f09b25c883cf8983d00"/><file name="SubscriberController.php" hash="67708315f62daddf20a2a5ebf07b0ecc"/></dir><dir name="etc"><file name="adminhtml.xml" hash="cb6b81993f56c0e819826592b4070c14"/><file name="config.xml" hash="143696d531af1731a53296c3b0bb30cd"/><file name="system.xml" hash="11209372fe9581056194c36ac43be79d"/></dir><dir name="Helper"><file name="Data.php" hash="58899cb350b205f6beae6c72ccc4d2b4"/></dir><dir name="Model"><file name="Api.php" hash="ae96286d9cc00c2d3da8ea910e72125f"/><file name="Gage.php" hash="4f4ac169db380c37efb010e527fe8f87"/><file name="Observer.php" hash="5dfa1f8b2ef7a6d261e6d74eee26b47b"/><dir name="System"><dir name="Config"><dir name="Source"><file name="List.php" hash="810c8db0bcf42bce2c443cd931539f35"/></dir></dir></dir></dir></dir></dir></target></contents>
     <compatible/>
-    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php><package><name>Mage_Core_Modules</name><channel>community</channel><min>1.6.0.0</min><max>1.8.1</max></package><extension><name>curl</name><min></min><max></max></extension></required></dependencies>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php><extension><name>curl</name><min></min><max></max></extension></required></dependencies>
 </package>

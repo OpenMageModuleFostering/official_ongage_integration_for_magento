@@ -2,8 +2,8 @@
 include_once('Mage/Newsletter/controllers/SubscriberController.php');
 /*
     * Ongage Magento Plug-in
-    * Version 1.0.4
-    * Released March, 2014
+    * Version 1.0.5
+    * Released July, 2014
     * Credits: Jaldip Upadhyay, Krunal Patel, Pratik Patel, Dharmesh Vasani
     * Terms of Service: http://www.ongage.com/legal-terms/terms-of-service
     * Copyright (C) Ongage
