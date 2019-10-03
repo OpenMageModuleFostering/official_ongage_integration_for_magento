@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Official_Ongage_Integration_For_Magento",
+    "name": "OpenMageModuleFostering\/Official_Ongage_Integration_For_Magento",
     "type": "magento-module",
     "license": "OSL-v3.0",
     "homepage": "",
     "description": "Ongage Extension",
     "authors": [
-    {
-        "name": "Stepin team",
-        "email": "StepinSolutionsteam@stepin.in"
-    }
-],
+        {
+            "name": "Stepin team",
+            "email": "StepinSolutionsteam@stepin.in"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
